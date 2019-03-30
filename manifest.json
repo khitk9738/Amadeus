@@ -1,0 +1,56 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "currency/js/common.js", "currency/js/background.js","js/jquery.min.js", "js/nlp_compromise.min.js", "js/on-off-switch.js", "js/on-off-switch-onload.js", "js/jquery-1.11.2.min.js", "background.js", "twitter/js/background.js","readaloud/js/jquery.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "chromeit128.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Amadeus"
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "content_scripts": [
+        {
+            "all_frames": true,
+			"matches": [ "<all_urls>","http://*/*", "https://*/*" ],
+            "js" : [
+                "./background-process/gesture.js",
+                "./content-scripts/interact.js",
+                "./content-scripts/easing.js",
+				"./js/injectcss.js"
+            ],
+            "run_at":"document_end"
+        },
+		{
+		  "all_frames": false,
+		  "js": [ "currency/js/jquery.min.js", "currency/js/common.js", "currency/js/content.js" ],
+		  "matches": [ "\u003Call_urls>" ]
+	   } 
+    ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "description": "Now use your voice to control your browser.",
+   "icons": {
+      "128": "chromeit128.png",
+      "48": "chromeit48.png",
+      "16": "chromeit16.png"
+   },
+   "options_ui": {"page": "twitter/options.html"},
+   "commands": {
+     "_execute_browser_action": {
+       "suggested_key": {
+         "default": "Alt+T"
+       }
+     }
+   },
+   "manifest_version": 2,
+   "name": "Amadeus",
+   "permissions": [  "\u003Call_urls>", "contextMenus","tts","clipboardWrite","activeTab","ttsEngine", "webNavigation","bookmarks", "history", "geolocation", "topSites", "tabs","downloads", "notifications", "desktopCapture" ,"<all_urls>", "https://ajax.googleapis.com/", "http://clients1.google.com/complete/search", "http://suggestqueries.google.com/complete/search", "storage" ],
+   "short_name": "Amadeus",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ "css/main.css", "js/dom.js", "js/words.js", "img/summary_missing.png", "img/timeline_missing.png" ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Options</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,400italic,300,500,500italic,700,700italic,900&subset=latin,greek' rel='stylesheet' type='text/css'>
+  <link href="options.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <h2>CurrencyConverter Options</h2>
+
+
+    <fieldset>
+     <table cellspacing="0">
+       <tr>
+        <th>Base currency</th>
+        <td><select id="currency" name="currency"></select></td>
+      </tr>
+  </tr>
+         <tr>
+             <th>Decimal separator</th>
+             <td>
+                 <select id="format-decimal">
+                     <option value="">Auto</option>
+                     <option value=",">,</option>
+                     <option value=".">.</option>
+                 </select>
+             </td>
+         </tr>
+
+         <tr>
+             <th>Symbol position</th>
+             <td>
+                 <select id="format-position">
+                     <option value="">Auto</option>
+                     <option value="left">Left</option>
+                     <option value="rigth">Right</option>
+                 </select>
+             </td>
+         </tr>
+
+
+</table>
+
+</fieldset>
+
+
+
+<footer>
+
+
+  <div style="float: left;">
+    <button  style="font-weight: bold;">Save options</button> <span id="say">Changed</span>
+  </div>
+
+</footer>
+
+</div>
+
+<script src="../js/currencies.js"></script>
+<script src="options.js"></script>
+
+</body>
+</html>
