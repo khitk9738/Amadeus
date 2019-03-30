@@ -1,0 +1,250 @@
+@import 'global.css';
+
+body, html {
+	width: 390px;
+	max-height: 581px;
+	overflow-y: hidden;
+}
+
+a {
+	color: #11c;
+	text-decoration: none;
+}
+
+header {
+	display: block;
+	padding: 6px 6px 10px 6px;
+	position: fixed;
+	width: 100%;
+}
+
+.box-fix {
+	box-shadow: 0 5px 32px -14px #999;
+	margin-left: -6px;
+	padding: 0 12px 12px 6px;
+}
+
+#q:focus {
+	outline: none;
+	border-color: #4285f4;
+}
+
+article {
+	min-height: 150px;
+	padding: 6px 6px 15px 6px;
+	padding-top: 44px;
+}
+
+.ac {
+	padding-top: 134px
+}
+
+#title {
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 5px;
+	padding-bottom: 15px;
+}
+
+#meaning {
+	overflow-y: auto;
+	max-height: 400px;
+	padding-right: 6px;
+}
+
+#lookup-status {
+	margin-top: 12px;
+}
+
+#web-search-link {
+	margin-top: 6px;
+}
+
+#usage-tip {
+	color: #666;
+	margin-top: 12px;
+}
+
+#tabs {
+	border-bottom: 1px solid #ccc;
+	display: none;
+	height: 39px;
+	list-style: none;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+#tabs  li {
+	float: left;	
+}
+
+#tabs  a {
+	background-color: #f3f3f3;
+	border: 1px solid #ccc;
+	border-width: 1px 1px 1px 0;
+	display: block;
+	margin-bottom: -1px;
+	padding: 9px 24px;
+}
+
+#tabs  .active a {
+	background-color: white;
+	border-bottom-color: white;
+}
+
+#tabs  li:first-child a {
+	border-left-width: 1px;
+}
+
+.count {
+	background-color: #878787;
+	border-radius: 50%;
+	color: white;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+footer {
+	color: #666;
+	font-size: 10px;
+	margin-top: 12px;
+	text-align: center;
+}
+
+h1 {
+	border-right: 1px dotted #ccc;
+	color: #000;
+	display: inline-block;
+	font-size: 32px;
+	line-height: 1em;
+	margin: 7px 0 0px 0;
+	padding: 0 15px 3px 0;
+}
+
+.word_count, h2 {
+	color: #e41513;
+	display: inline-block;
+	font-size: 22px;
+	padding: 6px 0 0 0;
+}
+
+.word_count {
+	color: #878787;
+	font-family: Verdana;
+	font-size: 9px;
+	font-weight: bold;
+	margin-right: 8px;
+	vertical-align: super;
+}
+
+h2 em {
+	color: #878787;
+	font: normal normal 16px 'Segoe UI Semibold';
+	margin-left: 10px;
+}
+
+ol {
+	line-height: 20px;
+	list-style: none;	
+	margin-bottom: 15px;
+	margin-top: -5px;
+	padding-left: 36px;
+}
+
+ol > li {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+ol ul {
+	color: #555;
+	display: inline;
+	font-weight: normal;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol ul > li {
+	display: inline;
+}
+
+#meta {
+	color: #999;
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 20px;
+	position: relative;
+	top: -3px;
+}
+
+.definition_no {
+	color: #999;
+	display: inline-block;
+	font-weight: normal;
+	padding-right: 7px;
+	text-align: right;
+	width: 36px;
+	margin-left: -39px;
+}
+
+.pronunciation {
+	color: #e41513;
+	display: inline-block;
+	font-family: monaco, Arial;
+	font-size: 16px;
+	padding: 0 10px;
+}
+
+.audio_pronunciation {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABqSURBVHjazFPRCgAhCMvoW/Wb/FoPHwSRNCS4u4EUro2YCCIybjDHJUoDIpJTb3bECmYGz82O2PreZFUCL1SRCfVshRi//d4U/mMQg/NYFlI1RuO3RroLu0JE0co4u6cG8WHWg8+38RFgADtAko3CwXmBAAAAAElFTkSuQmCC') no-repeat top right;
+    bottom: -2px;
+	display: inline-block;
+    height: 16px;
+	margin: 0 5px;
+    padding: 0;
+    position: relative;
+	text-indent: -4999px;
+	width: 16px;
+}
+
+.audio_pronunciation:hover,.playing {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABsSURBVHjaYvr//z8DJZiJgUKA14An1ir/CYkxkaIZBGSO3mFElmMiRTNMHNkQFnwakDWCNME0gmiiwgCXs4kORIpjYfAYgB5wyIAFFkj4ohEmj80gJlyhjk8c2SAmfFFHjHcYQTlqQGMBIMAA8xpxM1mCdtIAAAAASUVORK5CYII=')
+}
+
+.ui-corner-all {
+	border: 1px solid #ccc;
+	border-radius: 0;
+}
+
+.ui-autocomplete a.ui-state-focus {
+	background: #eee;
+	border: none;
+	border-radius: 0;
+	margin: 0 !important;
+}
+
+.ui-autocomplete .ui-menu-item .ui-corner-all {
+	border: none;
+}
+
+.ui-autocomplete {
+	border-top-color: #d9d9d9;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	cursor: default;
+	font-size: 16px;
+}
+
+#press_enter {
+	color: #666;
+	display: none;
+	left: 8px;
+	position: relative;
+}
+
+.meta {
+	color: #444444;
+    font-size: 12px;
+	margin-top: 10px;
+}

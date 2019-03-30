@@ -9,18 +9,44 @@ $("#todo_button").on('click', function() {
 $("#notes_button").on('click', function() {
   document.location.href = "../notes/popup.html";
 });
+$("#snake_button").on('click', function() {
+  document.location.href = "../Snake/popup.html";
+});
+$("#dictionary").on('click', function() {
+  document.location.href = "../dictionary/pages/page_action.html";
+});
 $("#2048_button").on('click', function() {
   document.location.href = "../2048/popup.html";
 });
 $("#cur_button").on('click', function() {
   document.location.href = "currency.html";
 });
+$("#pip_button").on('click', function() {
+  document.location.href = "pip/popup.html";
+});
 $("#sum_button").on('click', function() {
   document.location.href = "sum.html";
 });
-
+$("#doodle_music_button").on('click', function() {
+var newURL2 = "http://www.google.com/logos/2017/fischinger/fischinger17.html";
+  chrome.tabs.create({ url: newURL2 });
+});
+$("#game_V").on('click', function() {
+var newURL3 = "http://www.google.com/logos/2017/vday17/vday17-27919858.html";
+  chrome.tabs.create({ url: newURL3 });
+});
+$("#pacman_button").on('click', function() {
+var newURL4 = "http://www.google.com/logos/2010/pacman10-i.html";
+  chrome.tabs.create({ url: newURL4 });
+});
+$("#spotify_button").on('click', function() {
+  var e=(window.screen.availHeight-200)/2,n=(window.screen.availWidth-650)/2;window.open(chrome.extension.getURL("https://open.spotify.com/browse/featured"),"spotify","width=850,height=700,top="+e+",left="+n)
+});
 $("#record_button").on('click', function() {
   var e=(window.screen.availHeight-200)/2,n=(window.screen.availWidth-650)/2;window.open(chrome.extension.getURL("../screenrecord/index.html"),"screen-recorder","width=650,height=200,top="+e+",left="+n)
+});
+$("#pnr_button").on('click', function() {
+  document.location.href = "pnr/pnr.html";
 });
 
  //onoffswitch work

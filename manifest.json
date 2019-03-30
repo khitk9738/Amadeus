@@ -5,7 +5,7 @@
    },
    "browser_action": {
       "default_icon": {
-         "128": "chromeit128.png"
+         "128": "amadeus128.png"
       },
       "default_popup": "popup.html",
       "default_title": "Amadeus"
@@ -34,9 +34,9 @@
    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
    "description": "Now use your voice to control your browser.",
    "icons": {
-      "128": "chromeit128.png",
-      "48": "chromeit48.png",
-      "16": "chromeit16.png"
+      "128": "amadeus128.png",
+      "48": "amadeus48.png",
+      "16": "amadeus16.png"
    },
    "options_ui": {"page": "twitter/options.html"},
    "commands": {
@@ -48,9 +48,10 @@
    },
    "manifest_version": 2,
    "name": "Amadeus",
-   "permissions": [  "\u003Call_urls>", "contextMenus","tts","clipboardWrite","activeTab","ttsEngine", "webNavigation","bookmarks", "history", "geolocation", "topSites", "tabs","downloads", "notifications", "desktopCapture" ,"<all_urls>", "https://ajax.googleapis.com/", "http://clients1.google.com/complete/search", "http://suggestqueries.google.com/complete/search", "storage" ],
+   "offline_enabled": true,
+   "permissions": [  "\u003Call_urls>","alarms", "cookies", "contextMenus","tts","clipboardWrite","activeTab","ttsEngine", "webNavigation","bookmarks", "history", "geolocation", "topSites", "tabs","downloads", "notifications", "desktopCapture" ,"<all_urls>", "https://ajax.googleapis.com/", "http://clients1.google.com/complete/search", "http://suggestqueries.google.com/complete/search","http://api.meaningcloud.com/*", "storage" ],
    "short_name": "Amadeus",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0",
-   "web_accessible_resources": [ "css/main.css", "js/dom.js", "js/words.js", "img/summary_missing.png", "img/timeline_missing.png" ]
+   "web_accessible_resources": [ "css/main.css", "js/dom.js", "js/words.js", "img/summary_missing.png", "img/timeline_missing.png","*" ]
 }

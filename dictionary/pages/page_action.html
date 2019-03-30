@@ -1,0 +1,31 @@
+<!doctype HTML>
+<link rel="stylesheet" href="../js/jQueryUI/css/smoothness/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" href="../css/page_action.css">
+
+<header>
+	<form id="search-form">
+		<input id="q" size="24" x-webkit-speech>
+		<input type="submit" value="Define">
+	</form>
+	<div id="press_enter">Press Enter to search.</div>
+</header>
+	
+<article>
+	<ul id="tabs">
+		<li class="active"><a href="#">Dictionary <span class="count">3</span></a>
+		<li><a href="#">Wikipedia <span class="count">1</span></a>
+		<li><a href="#">Youtube <span class="count">5</span></a>
+	</ul>
+	<div id="title"></div>
+	<section id="meaning" style="display: none;"></section>
+	<div id="lookup-status" style="display: none;"></div>
+	<div id="usage-tip" style="display: block;">Tip: Select text on any webpage, then click the 'D' button to view the definition of your selection.</div>
+</article>
+<span id="audio"></span>
+
+<footer>©2014 Good Word Guide - <a id="options-link" href="options.html" target="_blank">Extension Options</a></footer>
+
+<script src="../js/jQueryUI/js/jquery-1.9.1.min.js"></script>
+<script src="../js/jQueryUI/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page_action.js"></script>

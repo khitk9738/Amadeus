@@ -7,7 +7,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 /////////////////////events///////////////////////////
 chrome.runtime.onInstalled.addListener(function() {
 	var context = "selection";
-	var title = "Add to ChromeIt Notes";
+	var title = "Add to Amadeus Notes";
 	chrome.contextMenus.create({"title": title, "contexts":[context], "id": "context" + context});  
 });
 
@@ -17,11 +17,11 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 function onClickHandler(info, tab) {
 	var sText = info.selectionText;
 	appendNoteData(sText);
-	notifyMe('Selected text has been added to ChromeIt Notes');
+	notifyMe('Selected text has been added to Amadeus Notes');
 };
 
 function notifyMe(text) {
-	chrome.notifications.create("NotificationChromeItNotes", {"type": 'basic', "iconUrl": 'chromeit48.png', "title": 'Notes', "message": text}, function(){});
+	chrome.notifications.create("NotificationAmadeusNotes", {"type": 'basic', "iconUrl": 'chromeit48.png', "title": 'Notes', "message": text}, function(){});
 }
 
 function addNoteData(newData, oldData)
@@ -209,7 +209,7 @@ $(document).ready(function(){
         if(items2.firsttime === undefined || items2.firsttime === 2){
 			chrome.storage.local.set({ "firsttime": 3 }, function(){
 				chrome.tabs.create({'url': 'chrome://newtab'});
-				chrome.tabs.create({'url': 'https://khitk9738.github.io'});
+				chrome.tabs.create({'url': 'https://khitk9738.github.io/Amadeus/index.html'});
 			});
         }
 	});

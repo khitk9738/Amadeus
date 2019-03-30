@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+min-width: 420px; 
+font-family: Arial, sans-serif; 
+font-size: 12px;
+text-align:center;
+}
+h1 {
+background-color:#2C3E50;
+color:#FFF;
+padding:5px;
+border-radius:3px;
+}
+
+input
+{
+width:97%;
+padding:4px;
+border:1px solid #AAA;
+border-radius:3px;
+}
+
+select
+{
+width:100%;
+padding:4px;
+border:1px solid #AAA;
+border-radius:3px;
+}
+input[type=submit]
+{
+width:100%;
+color:#FFFFFF;
+padding:7px;
+background:#0078e7;
+border: 0 rgba(0,0,0,0);
+cursor: pointer;
+border-radius:3px;
+}
+
+.CSSTableGen table { width:100%;border-collapse: collapse;}
+.CSSTableGen table td { vertical-align:middle;
+	border:1px solid #ccd0d3;
+	border-width:1px 1px 1px 1px;
+	text-align:center;
+	padding:6px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}
+.CSSTableGen table tr:first-child {
+background: #f5f6f6;
+}
+.CSSTableGen table tr {
+background-color: rgb(255, 160, 122);
+}
+.CSSTableGen table tr:last-child {
+background-color:#FFF;
+}
+</style>
+<script src="popup.js"></script>
+</head>
+<body>
+
+<div style="text-align:left;padding:20px;border:1px solid #000;">
+<form id="ctracking">
+<input type="text" name="lccp_pnrno1" id="lccp_pnrno1"/>
+<div>&nbsp;</div>
+<input id="save" type="submit" value="Get PNR Status" />
+</form>
+</div>
+<div>&nbsp;</div><div>&nbsp;</div>
+<div id="status-display"></div>
+</body>
+</html>

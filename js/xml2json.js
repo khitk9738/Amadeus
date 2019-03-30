@@ -5,7 +5,6 @@
  */
 (function() {
 
-	// default options based on https://github.com/Leonidas-from-XIV/node-xml2js
 	var defaultOptions = {
 		attrkey: '$',
 		charkey: '_',
